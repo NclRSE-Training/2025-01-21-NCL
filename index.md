@@ -201,7 +201,9 @@ Modify the block below if there are any special requirements.
     Participants must have access to a computer with a
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
   {% endif %}
-  In in order to continue working after the course, they should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  In in order to continue working after the course, they should have a few specific software packages installed (listed <a href="#setup">below</a>). 
+  <br>
+  Note for members of Newcastle University: Software should be installed from Software Center on Newcastle University managed Windows PCs and laptops. In case of difficulty please log a ticket to it.servicedesk@ncl.ac.uk and let us know at the contact details below if you still need help.
 </p>
 
 {% comment %}
@@ -211,6 +213,7 @@ Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
 
+<p>
 Accessibility: {% if online == "false" %} We are committed to making this workshop accessible to everybody. For workshops at a physical location, the workshop organizers have checked that:
 
 The room is wheelchair / scooter accessible.
@@ -219,6 +222,7 @@ Materials will be provided in advance of the workshop and large-print handouts a
 
 {% else %} We are dedicated to providing a positive and accessible learning environment for all. Please notify the instructors in advance of the workshop if you require any accommodations or if there is anything we can do to make this workshop more accessible to you.
 {% endif %}
+</p>
 
 <p>
   <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
