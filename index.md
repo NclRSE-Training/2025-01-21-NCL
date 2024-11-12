@@ -214,7 +214,8 @@ special instructions.
 {% endcomment %}
 
 <p>
-Accessibility: {% if online == "false" %} We are committed to making this workshop accessible to everybody. For workshops at a physical location, the workshop organizers have checked that:
+<strong>Accessibility:</strong>
+  {% if online == "false" %} We are committed to making this workshop accessible to everybody. For workshops at a physical location, the workshop organizers have checked that:
 
 The room is wheelchair / scooter accessible.
 Accessible restrooms are available.
