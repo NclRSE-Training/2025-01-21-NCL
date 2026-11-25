@@ -3,22 +3,22 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "Newcastle University"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "Henry Daysh Building 6.19 PGR Learning Lab, Newcastle University"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "gb"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "54.980639"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1.6143042"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "21 January 2025"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "09:00 - 17:00"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: 2025-01-21      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2025-01-21        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Jannetta Steyn","John Schoneboom"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Carol Booth", "Robin Nandi"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["jannetta.steyn@newcastle.ac.uk"]   # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: https://hackmd.io/@rseteam-ncl/2025-01-21-NCL # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
-what3words:  "intro.aims.intent"         # optional: what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
+venue: "Newcastle University"
+address: "Henry Daysh Building, PC Cluster R1.12"
+country: "gb"
+language: "en"
+latitude: "54.980533"
+longitude: "-1.614660"
+humandate: "2025-01-21"
+humantime: "09:00 to 17:00 (UTC)"
+startdate: 2025-01-21
+enddate: 2025-01-21
+instructor: ["Dr John Schoneboom","Dr  Jannetta Steyn"]
+helper: ["Dr Robin Nandi","Carol Booth"]
+email: ["training.researchcomputing@newcastle.ac.uk"]
+collaborative_notes: https://hackmd.io/@RSETeam/2025-01-21-NCL/edit
+eventbrite: 
+what3words: "bars.hips.hired"
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -35,8 +35,6 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 
 
 {% comment %}
-8< ============= For a workshop delete from here =============
-8< ============================= until here ==================
 {% endcomment %}
 
 {% comment %}
@@ -73,13 +71,13 @@ displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
 {% if page.eventbrite %}
 <strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
+registration box below, please check your adblocker settings.</strong>
 <iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
+src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+frameborder="0"
+width="100%"
+height="280px"
+scrolling="auto">
 </iframe>
 {% endif %}
 
@@ -100,10 +98,10 @@ href="{{site.swc_site}}">Software Carpentry</a>, <a href="{{site.dc_site}}">Data
 helpers, and supporters who share a mission to teach foundational computational and data science
 skills to researchers.
 <p align="center">
-  <em>
-  <strong>Want to learn more and stay engaged with The Carpentries?</strong> Carpentries Clippings is The Carpentries' biweekly newsletter, where we share community news, community job postings, and more.
+<em>
+<strong>Want to learn more and stay engaged with The Carpentries?</strong> Carpentries Clippings is The Carpentries' biweekly newsletter, where we share community news, community job postings, and more.
 Sign up to receive future editions and read our full archive: <a href="https://carpentries.org/newsletter/">https://carpentries.org/newsletter/</a>
-  </em>
+</em>
 </p>
 {% if site.carpentry == "swc" %}
 {% include swc/intro.html %}
@@ -149,28 +147,28 @@ address.
 {% endif %}
 {% if page.latitude and page.longitude and online == "false" %}
 <p id="where">
-  <strong>Where:</strong>
-  Henry Daysh Building, PGR Learning Lab R6.19.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
-  {% if page.what3words %}
-    What3Words location:
-    <a href="https://what3words.com/{{page.what3words}}">///{{page.what3words}}</a>.
-  {%endif %}
+<strong>Where:</strong>
+Henry Daysh Building, PGR Learning Lab R6.19.
+Get directions with
+<a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
+or
+<a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
+{% if page.what3words %}
+What3Words location:
+<a href="https://what3words.com/{{page.what3words}}">///{{page.what3words}}</a>.
+{%endif %}
 </p>
 {% elsif online == "true_public" %}
 <p id="where">
-  <strong>Where:</strong>
-  online at <a href="{{page.address}}">{{page.address}}</a>.
-  If you need a password or other information to access the training,
-  the instructor will pass it on to you before the workshop.
+<strong>Where:</strong>
+online at <a href="{{page.address}}">{{page.address}}</a>.
+If you need a password or other information to access the training,
+the instructor will pass it on to you before the workshop.
 </p>
 {% elsif online == "true_private" %}
 <p id="where">
-  <strong>Where:</strong> This training will take place online.
-  The instructors will provide you with the information you will need to connect to this meeting.
+<strong>Where:</strong> This training will take place online.
+The instructors will provide you with the information you will need to connect to this meeting.
 </p>
 {% endif %}
 
@@ -181,9 +179,9 @@ This block displays the date and links to Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
-  {{page.humandate}}; {{page.humantime}}
-  {% include workshop_calendar.html %}
+<strong>When:</strong>
+{{page.humandate}}; {{page.humantime}}
+{% include workshop_calendar.html %}
 </p>
 {% endif %}
 
@@ -193,17 +191,17 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong>
-  {% if online == "false" %}
-    PCs and an online environment will be provided but participants are welcome to bring their own laptop with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% else %}
-    Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% endif %}
-  In in order to continue working after the course, they should have a few specific software packages installed (listed <a href="#setup">below</a>). 
-  <br>
-  Note for members of Newcastle University: Software should be installed from Software Center on Newcastle University managed Windows PCs and laptops. In case of difficulty please log a ticket to it.servicedesk@ncl.ac.uk and let us know at the contact details below if you still need help.
+<strong>Requirements:</strong>
+{% if online == "false" %}
+PCs and an online environment will be provided but participants are welcome to bring their own laptop with a
+Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+{% else %}
+Participants must have access to a computer with a
+Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+{% endif %}
+In in order to continue working after the course, they should have a few specific software packages installed (listed <a href="#setup">below</a>).
+<br>
+Note for members of Newcastle University: Software should be installed from Software Center on Newcastle University managed Windows PCs and laptops. In case of difficulty please log a ticket to it.servicedesk@ncl.ac.uk and let us know at the contact details below if you still need help.
 </p>
 
 {% comment %}
@@ -215,12 +213,12 @@ special instructions.
 
 <p>
 <strong>Accessibility:</strong>
-  {% if online == "false" %} We are committed to making this workshop accessible to everybody. For workshops at a physical location, the workshop organizers have checked that:
+{% if online == "false" %} We are committed to making this workshop accessible to everybody. For workshops at a physical location, the workshop organizers have checked that:
 
-  <ul>
-    <li>The room is wheelchair / scooter accessible.</li>
-    <li>Accessible restrooms are available.</li>
-  </ul>
+<ul>
+<li>The room is wheelchair / scooter accessible.</li>
+<li>Accessible restrooms are available.</li>
+</ul>
 Materials will be provided in advance of the workshop and large-print handouts are available if needed by notifying the organizers in advance. If we can help making learning easier for you (e.g. sign-language interpreters, lactation facilities) please get in touch (using contact details below) and we will attempt to provide them.
 
 {% else %} We are dedicated to providing a positive and accessible learning environment for all. Please notify the instructors in advance of the workshop if you require any accommodations or if there is anything we can do to make this workshop more accessible to you.
@@ -228,11 +226,11 @@ Materials will be provided in advance of the workshop and large-print handouts a
 </p>
 
 <p>
-  <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
-  for computing and data science terms. The glossary helps 
-  learners attend workshops and use our lessons to make sense of computational and programming jargon written in English by offering it 
-  in their native language. Translating data science terms also provides a teaching tool for Carpentries Instructors to reduce barriers 
-  for their learners.
+<a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary
+for computing and data science terms. The glossary helps
+learners attend workshops and use our lessons to make sense of computational and programming jargon written in English by offering it
+in their native language. Translating data science terms also provides a teaching tool for Carpentries Instructors to reduce barriers
+for their learners.
 </p>
 
 {% comment %}
@@ -241,29 +239,29 @@ CONTACT EMAIL ADDRESS
 Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
-  <strong>Contact:</strong>
-  Please email
-  {% if page.email %}
-  {% for email in page.email %}
-  {% if forloop.last and page.email.size > 1 %}
-  or
-  {% else %}
-  {% unless forloop.first %}
-  ,
-  {% endunless %}
-  {% endif %}
-  <a href='mailto:{{email}}'>{{email}}</a>
-  {% endfor %}
-  {% else %}
-  to-be-announced
-  {% endif %}
-  for more information.
+<strong>Contact:</strong>
+Please email
+{% if page.email %}
+{% for email in page.email %}
+{% if forloop.last and page.email.size > 1 %}
+or
+{% else %}
+{% unless forloop.first %}
+,
+{% endunless %}
+{% endif %}
+<a href='mailto:{{email}}'>{{email}}</a>
+{% endfor %}
+{% else %}
+to-be-announced
+{% endif %}
+for more information.
 </p>
 
 <p id="roles">
-  <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
+<strong>Roles:</strong>
+To learn more about the roles at the workshop (who will be doing what),
+refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
 </p>
 
 {% comment %}
@@ -279,11 +277,11 @@ Edit the text to match who can attend the workshop. For instance:
 - This workshop is open to affiliates to ABC university.
 - This workshop is open to the public.
 - If you are interested in attending this workshop, contact me@example.com
-  for more information
+for more information
 
 <p id="who-can-attend">
-    <strong>Who can attend?:</strong>
-    This workshop is open to ....
+<strong>Who can attend?:</strong>
+This workshop is open to ....
 </p>
 {% endcomment %}
 
@@ -299,9 +297,9 @@ Everyone who participates in Carpentries activities is required to conform to th
 </p>
 
 <p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
+<a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+<button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
+</a>
 </p>
 <hr/>
 
@@ -385,7 +383,7 @@ of code below the Schedule `<h2>` header below with
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
 {% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in 
+This workshop is teaching a lesson in
 <a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>. Please check <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for a list of lesson sections and estimated timings.
 {% endif %}
 
@@ -417,29 +415,29 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+To participate in a
+{% if site.carpentry == "swc" %}
+Software Carpentry
+{% elsif site.carpentry == "dc" %}
+Data Carpentry
+{% elsif site.carpentry == "lc" %}
+Library Carpentry
+{% endif %}
+workshop,
+you will need access to software as described below.
+In addition, you will need an up-to-date web browser.
 </p>
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+We maintain a list of common issues that occur during installation as a reference for instructors
+that may be useful on the
+<a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
 {% comment %}
 For online workshops, the section below provides:
 - installation instructions for the Zoom client
 - recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
+the instructions and the videoconferencing
 
 If you do not use Zoom for your online workshop, edit the file
 `_includes/install_instructions/videoconferencing.html`
